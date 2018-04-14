@@ -3,7 +3,7 @@ Include Ensemble
 Class NovoLib.Task.DailyFreeDiskSpaceMonitor Extends %SYS.Task.Definition
 {
 
-Property SMTPServer As %String [ InitialExpression = "HIEBANK001-AA", Required ];
+Property SMTPServer As %String [ InitialExpression = "SMTP.gmail.com", Required ];
 
 Property EmailDistributionList As %String(MAXLEN = 200) [ Required ];
 
@@ -15,7 +15,7 @@ Property PeriodToQuery As %String(DISPLAYLIST = ",Day(s),Week(s),Month(s)", VALU
 
 Parameter TaskName = "NovoLib.Task.DailyFreeDiskSpaceMonitor";
 
-/// This task will generate an email containing operational statistics of the MS HIE / Healthfirst integration.
+/// This task will generate an email containing Disk Space Information.
 /// 
 /// The email will contain the following detail:
 ///    DiskSpace
